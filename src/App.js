@@ -5,15 +5,14 @@ import { useState } from "react";
 
 
 function App() {
-  const [inputValue, setInputValue] = useState(" ")
-
+  const [inputValue, setInputValue] = useState("")
+  const setUrl = (url) => {
+    setInputValue(url)
+  }
   return (
     <div className="container">
-    
-      
-    <Inputfile setInputValue={setInputValue}/>
+    <Inputfile setUrl={setUrl}/>
     <Linkresult inputValue={inputValue}/>
-    
     </div>
   );
 }
